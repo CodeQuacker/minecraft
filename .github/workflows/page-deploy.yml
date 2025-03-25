@@ -33,12 +33,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           sparse-checkout: 'wssServer'
-      - name: handle working dir working dir 
+      - name: handle working dir
         run: |
           ls -a ./
           (shopt -s dotglob; mv ./wssServer/* ./)
           rm -r wssServer
           ls -a ./
+          npm install
       - name: Detect package manager
         id: detect-package-manager
         run: |
