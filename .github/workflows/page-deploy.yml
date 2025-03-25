@@ -37,7 +37,7 @@ jobs:
         run: |
           ls -a ./
           (shopt -s dotglob; mv ./wssServer/* ./)
-          rm wssServer
+          rm -r wssServer
           ls -a ./
       - name: Detect package manager
         id: detect-package-manager
