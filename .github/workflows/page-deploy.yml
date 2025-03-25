@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           sparse-checkout: 'wssServer'
-      - run: ls "${{ github.workspace }}" | echo
+      - run: cd "wssServer"
       - name: Detect package manager
         id: detect-package-manager
         run: |
