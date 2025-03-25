@@ -10,8 +10,7 @@ wss.on('connection', function connection(ws) {
 
     ws.on('message', function message(data) {
         console.log('received: %s', data);        
-        let a = "data recieved " + data
-        ws.send(a);
+        ws.send(("data recieved " + data));
     });
     ws.send('something');
 });
