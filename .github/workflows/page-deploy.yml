@@ -33,8 +33,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           sparse-checkout: 'wssServer'
-      - name: list working dir 
+      - name: handle working dir working dir 
         run: |
+          ls -a ./
+          (shopt -s dotglob; mv ./wssServer/* ./)
+          rm wssServer
           ls -a ./
       - name: Detect package manager
         id: detect-package-manager
